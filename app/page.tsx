@@ -6,6 +6,8 @@ import {
   RiLinkedinBoxFill,
 } from "react-icons/ri";
 import { get } from "@vercel/edge-config";
+import { redirect } from "next/navigation";
+
 
 interface Data {
   name: string;
@@ -63,9 +65,11 @@ function getSocialIcon(socialHref: string) {
   }
 }
 
-export default async function HomePage() {
+export default async function Home() {
   const data: Data | undefined = await get("linktree");
-  if (!data) return;
+  if (!data) {
+    redirect("https://woongsnote.dev");
+  }
 
   return (
     <main className="font-sans flex flex-col items-center justify-center mx-auto mt-16 px-8 md:px-20">
