@@ -1,0 +1,37 @@
+{
+  "name": "문지웅",
+  "avatar": "https://avatars.githubusercontent.com/u/83802168?v=4",
+  "links": [
+    {
+      "title": "개인 블로그",
+      "href": "https://woongsnote.dev",
+      "image": "https://avatars.githubusercontent.com/u/83802168?v=4"
+    },
+    {
+      "title": "velog",
+      "href": "https://woongsnote.dev"
+    },
+    {
+      "title": "포트폴리오",
+      "href": "https://woongsnote.dev"
+    }
+  ],
+  "socials": [
+    {
+      "title": "GitHub",
+      "href": "https://github.com/woongsnote"
+    },
+    {
+      "title": "Instagram",
+      "href": "https://www.instagram.com/woongsnote"
+    },
+    {
+      "title": "Kakao",
+      "href": "https://open.kakao.com/o/sge8IFse"
+    },
+    {
+      "title": "LinkedIn",
+      "href": "https://www.linkedin.com/in/woongsnote"
+    }
+  ]
+}
