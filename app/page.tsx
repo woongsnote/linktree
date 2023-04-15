@@ -1,11 +1,23 @@
 import Image from "next/image";
-import data from "../data.json";
 import {
   RiGithubFill,
   RiKakaoTalkFill,
   RiInstagramLine,
   RiLinkedinBoxFill,
 } from "react-icons/ri";
+import { get } from "@vercel/edge-config";
+
+interface Data {
+  name: string;
+  avatar: string;
+  links: Link[];
+  socials: Social[];
+}
+
+interface Social {
+  title: string;
+  href: string;
+}
 
 interface Link {
   href: string;
@@ -51,7 +63,10 @@ function getSocialIcon(socialHref: string) {
   }
 }
 
-export default function Home() {
+export default async function HomePage() {
+  const data: Data | undefined = await get("linktree");
+  if (!data) return;
+
   return (
     <main className="font-sans flex flex-col items-center justify-center mx-auto mt-16 px-8 md:px-20">
       <Image
