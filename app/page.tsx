@@ -8,7 +8,6 @@ import {
 import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
 
-
 interface Data {
   name: string;
   avatar: string;
@@ -31,7 +30,8 @@ function LinkCard({ href, title, image }: Link) {
   return (
     <a
       href={href}
-      className="flex items-center p-1 w-full rounded-md hover:scale-105 transition-all mb-3 bg-gray-100 max-w-3xl">
+      className="flex items-center p-1 w-full rounded-md hover:scale-105 transition-all mb-3 bg-gray-100 max-w-3xl"
+    >
       <div className="flex text-center items-center justify-center w-full">
         <div className="w-10 h-10">
           {image && (
@@ -65,8 +65,11 @@ function getSocialIcon(socialHref: string) {
   }
 }
 
+export const runtime = "edge";
+
 export default async function Home() {
   const data: Data | undefined = await get("linktree");
+
   if (!data) {
     redirect("https://woongsnote.dev");
   }
