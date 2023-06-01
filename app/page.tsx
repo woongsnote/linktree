@@ -33,18 +33,7 @@ function LinkCard({ href, title, image }: Link) {
       className="flex items-center p-1 w-full rounded-md hover:scale-105 transition-all mb-3 bg-gray-100 max-w-3xl"
     >
       <div className="flex text-center items-center justify-center w-full">
-        <div className="w-10 h-10">
-          {image && (
-            <Image
-              src={image}
-              alt={title}
-              width={48}
-              height={48}
-              className="rounded-sm"
-            />
-          )}
-        </div>
-        <h2 className="flex justify-center items-center font-bold w-full text-gray-800 -ml-10 text-lg">
+        <h2 className="flex justify-center items-center font-bold w-full text-gray-800 text-lg">
           {title}
         </h2>
       </div>
